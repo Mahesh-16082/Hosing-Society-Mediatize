@@ -1,0 +1,130 @@
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  width: 100%;
+  background-color: #ffe5c2;
+
+  padding: 32px 50px;
+}
+
+
+/* =========================
+   FOOTER CONTAINER
+========================= */
+
+.footer-container {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.footer-left {
+  color: #c93600;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 20px;
+  font-weight: 500;
+
+  line-height: 1.5;
+}
+
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.footer-right {
+  color: #c93600;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 19px;
+  font-style: italic;
+
+  white-space: nowrap;
+}
+
+.footer-right strong {
+  font-weight: 700;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .footer {
+    padding: 28px 30px;
+  }
+
+  .footer-left {
+    font-size: 17px;
+  }
+
+  .footer-right {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .footer {
+    padding: 25px 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+
+    gap: 15px;
+
+    text-align: center;
+  }
+
+  .footer-left {
+    font-size: 15px;
+  }
+
+  .footer-right {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+  .footer {
+    padding: 22px 15px;
+  }
+
+  .footer-left {
+    font-size: 13px;
+  }
+
+  .footer-right {
+    font-size: 14px;
+  }
+}

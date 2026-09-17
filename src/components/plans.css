@@ -1,0 +1,274 @@
+/* =========================
+   PLANS SECTION
+========================= */
+
+.plans-section {
+  width: 100%;
+
+  background-color: #fff0d9;
+
+  padding: 0 25px 50px;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.plans-container {
+  width: 100%;
+  max-width: 1220px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.plans-title {
+  margin: 0 0 30px;
+
+  color: #ed3f08;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 28px;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+
+/* =========================
+   TABS
+========================= */
+
+.plans-tabs {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 40px;
+}
+
+
+/* =========================
+   TAB BUTTON
+========================= */
+
+.plan-tab {
+  min-width: 127px;
+
+  padding: 12px 24px;
+
+  border: none;
+  border-radius: 5px;
+
+  background-color: transparent;
+
+  color: #111;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+
+/* Hover */
+
+.plan-tab:hover {
+  color: #d83d0c;
+}
+
+
+/* Active */
+
+.plan-tab.active {
+  background-color: #d83d00;
+
+  color: #ffffff;
+
+  font-weight: 500;
+}
+
+
+/* =========================
+   IMAGE CONTAINER
+========================= */
+
+.plans-image-container {
+  width: 100%;
+
+  min-height: 680px;
+
+  background-color: #ffffff;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.plans-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .plans-section {
+    padding: 0 25px 40px;
+  }
+
+  .plans-title {
+    font-size: 26px;
+  }
+
+  .plans-tabs {
+    margin-bottom: 30px;
+  }
+
+  .plans-image-container {
+    min-height: 550px;
+  }
+}
+
+
+/* =========================
+   TABLET / SMALL
+========================= */
+
+@media (max-width: 768px) {
+
+  .plans-section {
+    padding: 0 20px 35px;
+  }
+
+  .plans-title {
+    font-size: 24px;
+
+    margin-bottom: 25px;
+  }
+
+  .plans-tabs {
+    gap: 8px;
+
+    margin-bottom: 25px;
+
+    flex-wrap: wrap;
+  }
+
+  .plan-tab {
+    min-width: auto;
+
+    padding: 11px 18px;
+
+    font-size: 15px;
+  }
+
+  .plans-image-container {
+    min-height: 450px;
+
+    border-radius: 10px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .plans-section {
+    padding: 0 15px 30px;
+  }
+
+  .plans-title {
+    font-size: 22px;
+
+    margin-bottom: 20px;
+  }
+
+  .plans-tabs {
+    width: 100%;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+  }
+
+  .plan-tab {
+    flex: 1;
+
+    padding: 11px 8px;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+  }
+
+  .plans-image-container {
+    width: 100%;
+
+    min-height: 350px;
+
+    border-radius: 8px;
+  }
+
+  .plans-image {
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: contain;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+  .plans-title {
+    font-size: 20px;
+  }
+
+  .plan-tab {
+    padding: 10px 5px;
+
+    font-size: 12px;
+  }
+
+  .plans-image-container {
+    min-height: 280px;
+  }
+}

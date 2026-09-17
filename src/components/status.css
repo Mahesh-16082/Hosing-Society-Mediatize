@@ -1,0 +1,95 @@
+/* =========================
+   STATUS SECTION
+========================= */
+
+.status-section {
+  width: 100%;
+
+  background-color: #fff0d9;
+
+  padding: 30px 30px 40px;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.status-container {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.status-image {
+  width: 100%;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.status-image img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .status-section {
+    padding: 25px 20px 35px;
+  }
+
+  .status-image {
+    border-radius: 10px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .status-section {
+    padding: 20px 15px 30px;
+  }
+
+  .status-image {
+    border-radius: 7px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+  .status-section {
+    padding: 15px 10px 25px;
+  }
+
+  .status-image {
+    border-radius: 6px;
+  }
+}

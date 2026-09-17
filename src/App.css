@@ -1,0 +1,27 @@
+/* =========================================
+   GLOBAL PAGE SETTINGS
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: #ffffff;
+
+  font-family: Arial, sans-serif;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: #ffffff;
+}

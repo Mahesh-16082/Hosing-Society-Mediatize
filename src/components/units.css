@@ -1,0 +1,145 @@
+/* =========================
+   UNITS SECTION
+========================= */
+
+.units-section {
+  width: 100%;
+  background-color: #d93400;
+
+  padding: 60px 30px;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.units-container {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+  align-items: center;
+  text-align: center;
+}
+
+
+/* =========================
+   ITEM
+========================= */
+
+.unit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+/* Value */
+
+.unit-item h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 28px;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+
+/* Label */
+
+.unit-item p {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 19px;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .units-section {
+    padding: 50px 25px;
+  }
+
+  .units-container {
+    grid-template-columns: repeat(3, 1fr);
+
+    row-gap: 40px;
+  }
+
+  .unit-item h2 {
+    font-size: 25px;
+  }
+
+  .unit-item p {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .units-section {
+    padding: 40px 15px;
+  }
+
+  .units-container {
+    grid-template-columns: repeat(2, 1fr);
+
+    row-gap: 35px;
+  }
+
+  .unit-item h2 {
+    font-size: 22px;
+  }
+
+  .unit-item p {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+  .units-section {
+    padding: 35px 10px;
+  }
+
+  .unit-item h2 {
+    font-size: 19px;
+  }
+
+  .unit-item p {
+    font-size: 12px;
+  }
+}

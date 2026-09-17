@@ -1,0 +1,331 @@
+/* =========================================
+   LOCATION SECTION
+========================================= */
+
+.location-section {
+  width: 100%;
+  box-sizing: border-box;
+
+  background-color: #ffecd2;
+
+  padding: 35px 28px 45px;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.location-container {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  box-sizing: border-box;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.location-title {
+  margin: 0 0 25px 0;
+  padding: 0;
+
+  color: #ff4b00;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   ADDRESS
+========================================= */
+
+.location-address {
+  width: 100%;
+
+  margin: 0 auto 28px;
+  padding: 0;
+
+  color: #14213d;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   MAP CONTAINER
+========================================= */
+
+.map-container {
+  position: relative;
+
+  width: 100%;
+
+  height: 315px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  border: 3px solid #f4c58f;
+
+  background-color: #ffffff;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   GOOGLE MAP
+========================================= */
+
+.google-map {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  border: 0;
+
+  margin: 0;
+  padding: 0;
+
+  pointer-events: auto;
+}
+
+
+/* =========================================
+   OPEN MAPS BUTTON
+========================================= */
+
+.open-maps-button {
+  position: absolute;
+
+  top: 10px;
+  left: 10px;
+
+  z-index: 10;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 125px;
+  height: 36px;
+
+  padding: 0 12px;
+
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+
+  color: #0066cc;
+
+  text-decoration: none;
+
+  border-radius: 4px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+  cursor: pointer;
+}
+
+
+.open-maps-button:hover {
+  background-color: #f2f2f2;
+}
+
+
+/* =========================================
+   LARGE TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .location-section {
+    padding: 35px 25px 40px;
+  }
+
+  .map-container {
+    height: 300px;
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+  .location-section {
+    padding: 35px 22px 40px;
+  }
+
+  .location-title {
+    font-size: 28px;
+
+    margin-bottom: 20px;
+  }
+
+  .location-address {
+    font-size: 14px;
+
+    margin-bottom: 25px;
+  }
+
+  .map-container {
+    height: 290px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .location-section {
+    width: 100%;
+
+    padding: 35px 20px 40px;
+  }
+
+
+  .location-container {
+    width: 100%;
+  }
+
+
+  .location-title {
+    font-size: 24px;
+
+    margin-bottom: 18px;
+  }
+
+
+  .location-address {
+    width: 100%;
+
+    padding: 0 5px;
+
+    margin-bottom: 23px;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+  }
+
+
+  .map-container {
+    width: 100%;
+
+    height: 280px;
+
+    border-radius: 8px;
+
+    border-width: 2px;
+  }
+
+
+  .google-map {
+    width: 100%;
+    height: 100%;
+
+    pointer-events: auto;
+  }
+
+
+  .open-maps-button {
+    top: 8px;
+    left: 8px;
+
+    min-width: 120px;
+
+    height: 35px;
+
+    font-size: 12px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .location-section {
+    padding: 30px 15px 35px;
+  }
+
+
+  .location-title {
+    font-size: 23px;
+
+    margin-bottom: 17px;
+  }
+
+
+  .location-address {
+    padding: 0;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+  }
+
+
+  .map-container {
+    height: 250px;
+
+    border-radius: 7px;
+  }
+
+
+  .open-maps-button {
+    top: 7px;
+    left: 7px;
+
+    min-width: 115px;
+
+    height: 34px;
+
+    padding: 0 10px;
+
+    font-size: 12px;
+  }
+
+}

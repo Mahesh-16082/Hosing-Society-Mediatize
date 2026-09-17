@@ -1,0 +1,353 @@
+/* ==============================
+   RESET
+================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+/* ==============================
+   NAVBAR
+================================= */
+
+.navbar {
+  width: 100%;
+  height: 140px;
+
+  background-color: #fff8ef;
+
+  border-top: 3px solid #d94716;
+
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1425px;
+  height: 100%;
+
+  margin: 0 auto;
+
+  padding: 0 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ==============================
+   LOGO
+================================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+}
+
+.logo img {
+  width: 200px;
+  height: auto;
+
+  display: block;
+}
+
+
+/* ==============================
+   DESKTOP NAVIGATION
+================================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 85px;
+}
+
+.nav-links a {
+  text-decoration: none;
+
+  color: #d83d0c;
+
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ff6b35;
+}
+
+
+/* ==============================
+   MOBILE MENU BUTTON
+================================= */
+
+.menu-button {
+  display: none;
+
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.menu-button span {
+  display: block;
+
+  width: 28px;
+  height: 3px;
+
+  background-color: #d83d0c;
+
+  border-radius: 3px;
+}
+
+
+/* ==============================
+   OVERLAY
+================================= */
+
+.overlay {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all 0.3s ease;
+
+  z-index: 1999;
+}
+
+.overlay-show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* ==============================
+   MOBILE SIDEBAR
+================================= */
+
+.sidebar {
+  position: fixed;
+
+  top: 0;
+  right: 0;
+
+  width: 320px;
+  max-width: 85%;
+
+  height: 100vh;
+
+  background-color: #fff8ef;
+
+  z-index: 2000;
+
+  transform: translateX(100%);
+
+  transition: transform 0.35s ease;
+
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-open {
+  transform: translateX(0);
+}
+
+
+/* ==============================
+   SIDEBAR HEADER
+================================= */
+
+.sidebar-header {
+  height: 120px;
+
+  padding: 25px 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #eadfd4;
+}
+
+.sidebar-header img {
+  width: 155px;
+  height: auto;
+}
+
+
+/* ==============================
+   CLOSE BUTTON
+================================= */
+
+.close-button {
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  background: transparent;
+
+  color: #d83d0c;
+
+  font-size: 40px;
+  font-weight: 300;
+
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+
+/* ==============================
+   SIDEBAR LINKS
+================================= */
+
+.sidebar-links {
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 25px;
+}
+
+.sidebar-links a {
+  padding: 20px 5px;
+
+  text-decoration: none;
+
+  color: #d83d0c;
+
+  font-family: Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+
+  border-bottom: 1px solid #eadfd4;
+
+  transition: all 0.2s ease;
+}
+
+.sidebar-links a:hover {
+  padding-left: 12px;
+
+  color: #ff6b35;
+}
+
+
+/* ==============================
+   TABLET
+================================= */
+
+@media (max-width: 1100px) {
+
+  .navbar-container {
+    padding: 0 35px;
+  }
+
+  .nav-links {
+    gap: 40px;
+  }
+
+  .nav-links a {
+    font-size: 20px;
+  }
+
+  .logo img {
+    width: 180px;
+  }
+}
+
+
+/* ==============================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    height: 95px;
+  }
+
+  .navbar-container {
+    padding: 0 25px;
+  }
+
+  /* Hide desktop navigation */
+  .nav-links {
+    display: none;
+  }
+
+  /* Show hamburger */
+  .menu-button {
+    display: flex;
+  }
+
+  .logo img {
+    width: 165px;
+  }
+}
+
+
+/* ==============================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 480px) {
+
+  .navbar {
+    height: 85px;
+  }
+
+  .navbar-container {
+    padding: 0 18px;
+  }
+
+  .logo img {
+    width: 145px;
+  }
+
+  .menu-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .menu-button span {
+    width: 25px;
+  }
+
+  .sidebar {
+    width: 290px;
+  }
+}

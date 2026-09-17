@@ -1,0 +1,244 @@
+/* =========================
+   CURRENT STATUS SECTION
+========================= */
+
+.current-status-section {
+  width: 100%;
+
+  background-color: #fff0d9;
+
+  padding: 45px 24px 55px;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.current-status-container {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.current-status-title {
+  margin: 0 0 42px;
+
+  color: #ed3f08;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+
+/* =========================
+   IMAGE CONTAINER
+========================= */
+
+.current-status-image-container {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  background-color: #ffffff;
+
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.current-status-image {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* =========================
+   ARROW BUTTON
+========================= */
+
+.status-arrow {
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 56px;
+  height: 56px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.65);
+
+  color: #c93600;
+
+  font-size: 48px;
+  font-weight: 300;
+
+  line-height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+
+/* =========================
+   ARROW POSITIONS
+========================= */
+
+.status-arrow-left {
+  left: 12px;
+}
+
+.status-arrow-right {
+  right: 12px;
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.status-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+
+  transform: translateY(-50%) scale(1.05);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .current-status-section {
+    padding: 35px 20px 45px;
+  }
+
+  .current-status-title {
+    font-size: 23px;
+
+    margin-bottom: 30px;
+  }
+
+  .current-status-image-container {
+    border-radius: 10px;
+  }
+
+  .status-arrow {
+    width: 48px;
+    height: 48px;
+
+    font-size: 40px;
+  }
+
+  .status-arrow-left {
+    left: 10px;
+  }
+
+  .status-arrow-right {
+    right: 10px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .current-status-section {
+    padding: 30px 15px 40px;
+  }
+
+  .current-status-title {
+    font-size: 20px;
+
+    margin-bottom: 22px;
+  }
+
+  .current-status-image-container {
+    border-radius: 8px;
+  }
+
+  .status-arrow {
+    width: 40px;
+    height: 40px;
+
+    font-size: 34px;
+
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .status-arrow-left {
+    left: 7px;
+  }
+
+  .status-arrow-right {
+    right: 7px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+  .current-status-section {
+    padding: 25px 10px 35px;
+  }
+
+  .current-status-title {
+    font-size: 18px;
+
+    margin-bottom: 18px;
+  }
+
+  .status-arrow {
+    width: 34px;
+    height: 34px;
+
+    font-size: 29px;
+  }
+
+  .status-arrow-left {
+    left: 5px;
+  }
+
+  .status-arrow-right {
+    right: 5px;
+  }
+}
