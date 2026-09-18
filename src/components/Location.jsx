@@ -1,4 +1,4 @@
-import "./Location.css";
+import "./location.css";
 
 function Location() {
   const address =

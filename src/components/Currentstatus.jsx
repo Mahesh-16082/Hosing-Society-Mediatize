@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./CurrentStatus.css";
+import "./Currentstatus.css";
 
 function CurrentStatus() {
   const [currentImage, setCurrentImage] = useState(0);
