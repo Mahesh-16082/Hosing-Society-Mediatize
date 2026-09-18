@@ -9,64 +9,29 @@ function Navbar() {
   };
 
   return (
-    <>
-      <nav className="navbar">
-        <div className="navbar-container">
+    <nav className={`navbar ${menuOpen ? "menu-is-open" : ""}`}>
+      
+      {/* ==============================
+          NAVBAR HEADER
+      ================================= */}
 
-          {/* Logo */}
-          <a href="#home" className="logo" onClick={closeMenu}>
-            <img src="/housing_society.png" alt="Housing Society" />
-          </a>
+      <div className="navbar-container">
 
-          {/* Desktop Navigation */}
-          <div className="nav-links">
-            <a href="#status">HOME</a>
-            <a href="#about">B06 Tower</a>
-            <a href="#plans">FLOOR PLANS</a>
-            <a href="#contact">CONTACT</a>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="menu-button"
-            onClick={() => setMenuOpen(true)}
-            aria-label="Open menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-
-        </div>
-      </nav>
-
-      {/* Dark Overlay */}
-      <div
-        className={`overlay ${menuOpen ? "overlay-show" : ""}`}
-        onClick={closeMenu}
-      ></div>
-
-      {/* Mobile Sidebar */}
-      <aside className={`sidebar ${menuOpen ? "sidebar-open" : ""}`}>
-
-        {/* Sidebar Header */}
-        <div className="sidebar-header">
+        {/* Logo */}
+        <a href="#home" className="logo" onClick={closeMenu}>
           <img
-            src="/public/housing_society.png"
+            src="/housing_society.png"
             alt="Housing Society"
           />
+        </a>
 
-          <button
-            className="close-button"
-            onClick={closeMenu}
-            aria-label="Close menu"
-          >
-            ×
-          </button>
-        </div>
 
-        {/* Sidebar Links */}
-        <div className="sidebar-links">
+        {/* ==============================
+            DESKTOP NAVIGATION
+        ================================= */}
+
+        <div className="nav-links">
+
           <a href="#status" onClick={closeMenu}>
             HOME
           </a>
@@ -82,10 +47,65 @@ function Navbar() {
           <a href="#contact" onClick={closeMenu}>
             CONTACT
           </a>
+
         </div>
 
-      </aside>
-    </>
+
+        {/* ==============================
+            MOBILE MENU BUTTON
+        ================================= */}
+
+        <button
+          className="menu-button"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+        >
+
+          {menuOpen ? (
+            <span className="close-icon">×</span>
+          ) : (
+            <>
+              <span></span>
+              <span></span>
+              <span></span>
+            </>
+          )}
+
+        </button>
+
+      </div>
+
+
+      {/* ==============================
+          MOBILE FULL WIDTH DROPDOWN
+      ================================= */}
+
+      <div
+        className={`mobile-dropdown ${
+          menuOpen ? "dropdown-open" : ""
+        }`}
+      >
+
+        <a href="#status" onClick={closeMenu}>
+          HOME
+        </a>
+
+        <a href="#about" onClick={closeMenu}>
+          B06 Tower
+        </a>
+
+        <a href="#plans" onClick={closeMenu}>
+          FLOOR PLANS
+        </a>
+
+        <a href="#contact" onClick={closeMenu}>
+          CONTACT
+        </a>
+
+      </div>
+
+    </nav>
   );
 }
 

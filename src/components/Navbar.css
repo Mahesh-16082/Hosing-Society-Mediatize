@@ -19,27 +19,35 @@ body {
 
 .navbar {
   width: 100%;
-  height: 140px;
 
   background-color: #fff8ef;
 
   border-top: 3px solid #d94716;
 
   position: relative;
+
   z-index: 1000;
 }
+
+
+/* ==============================
+   NAVBAR CONTAINER
+================================= */
 
 .navbar-container {
   width: 100%;
   max-width: 1425px;
-  height: 100%;
+
+  height: 140px;
 
   margin: 0 auto;
 
   padding: 0 55px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 }
 
@@ -50,6 +58,7 @@ body {
 
 .logo {
   display: flex;
+
   align-items: center;
 
   text-decoration: none;
@@ -57,6 +66,7 @@ body {
 
 .logo img {
   width: 200px;
+
   height: auto;
 
   display: block;
@@ -69,6 +79,7 @@ body {
 
 .nav-links {
   display: flex;
+
   align-items: center;
 
   gap: 85px;
@@ -80,7 +91,9 @@ body {
   color: #d83d0c;
 
   font-family: Arial, sans-serif;
+
   font-size: 24px;
+
   font-weight: 700;
 
   white-space: nowrap;
@@ -101,24 +114,38 @@ body {
   display: none;
 
   width: 45px;
+
   height: 45px;
 
+  padding: 0;
+
   border: none;
+
   background: transparent;
 
   cursor: pointer;
 
-  flex-direction: column;
   justify-content: center;
+
   align-items: center;
+}
+
+
+/* ==============================
+   HAMBURGER
+================================= */
+
+.menu-button:not(.menu-open) {
+  flex-direction: column;
 
   gap: 6px;
 }
 
-.menu-button span {
+.menu-button:not(.menu-open) span {
   display: block;
 
   width: 28px;
+
   height: 3px;
 
   background-color: #d83d0c;
@@ -128,139 +155,121 @@ body {
 
 
 /* ==============================
-   OVERLAY
+   CLOSE MARK
 ================================= */
 
-.overlay {
-  position: fixed;
-
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100vh;
-
-  background: rgba(0, 0, 0, 0.45);
-
-  opacity: 0;
-  visibility: hidden;
-
-  transition: all 0.3s ease;
-
-  z-index: 1999;
-}
-
-.overlay-show {
-  opacity: 1;
-  visibility: visible;
-}
-
-
-/* ==============================
-   MOBILE SIDEBAR
-================================= */
-
-.sidebar {
-  position: fixed;
-
-  top: 0;
-  right: 0;
-
-  width: 320px;
-  max-width: 85%;
-
-  height: 100vh;
-
-  background-color: #fff8ef;
-
-  z-index: 2000;
-
-  transform: translateX(100%);
-
-  transition: transform 0.35s ease;
-
-  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
-}
-
-.sidebar-open {
-  transform: translateX(0);
-}
-
-
-/* ==============================
-   SIDEBAR HEADER
-================================= */
-
-.sidebar-header {
-  height: 120px;
-
-  padding: 25px 25px;
-
+.close-icon {
   display: flex;
+
   align-items: center;
-  justify-content: space-between;
 
-  border-bottom: 1px solid #eadfd4;
-}
+  justify-content: center;
 
-.sidebar-header img {
-  width: 155px;
-  height: auto;
-}
+  width: 45px;
 
-
-/* ==============================
-   CLOSE BUTTON
-================================= */
-
-.close-button {
-  width: 40px;
-  height: 40px;
-
-  border: none;
-  background: transparent;
+  height: 45px;
 
   color: #d83d0c;
 
+  font-family: Arial, sans-serif;
+
   font-size: 40px;
-  font-weight: 300;
+
+  font-weight: 400;
 
   line-height: 1;
-
-  cursor: pointer;
 }
 
 
 /* ==============================
-   SIDEBAR LINKS
+   MOBILE DROPDOWN
 ================================= */
 
-.sidebar-links {
+.mobile-dropdown {
+  position: absolute;
+
+  top: 100%;
+
+  left: 0;
+
+  width: 100%;
+
+  background-color: #fff8ef;
+
+  border-bottom: 1px solid #d94716;
+
   display: flex;
 
   flex-direction: column;
 
-  padding: 25px;
+  /* Hidden */
+
+  max-height: 0;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition:
+    max-height 0.3s ease,
+    opacity 0.25s ease,
+    visibility 0.25s ease;
 }
 
-.sidebar-links a {
-  padding: 20px 5px;
+
+/* ==============================
+   DROPDOWN OPEN
+================================= */
+
+.mobile-dropdown.dropdown-open {
+  max-height: 400px;
+
+  opacity: 1;
+
+  visibility: visible;
+
+  border-bottom: 1px solid #d94716;
+}
+
+
+/* ==============================
+   MOBILE DROPDOWN LINKS
+================================= */
+
+.mobile-dropdown a {
+  display: flex;
+
+  align-items: center;
+
+  width: 100%;
+
+  min-height: 64px;
+
+  padding: 0 27px;
 
   text-decoration: none;
 
   color: #d83d0c;
 
   font-family: Arial, sans-serif;
-  font-size: 21px;
+
+  font-size: 18px;
+
   font-weight: 700;
 
-  border-bottom: 1px solid #eadfd4;
+  text-align: left;
 
-  transition: all 0.2s ease;
+  border-bottom: none;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
-.sidebar-links a:hover {
-  padding-left: 12px;
+.mobile-dropdown a:hover {
+  background-color: #fff0df;
 
   color: #ff6b35;
 }
@@ -296,26 +305,60 @@ body {
 
 @media (max-width: 768px) {
 
-  .navbar {
-    height: 95px;
-  }
-
   .navbar-container {
+    height: 95px;
+
     padding: 0 25px;
   }
 
-  /* Hide desktop navigation */
+
+  /* Hide desktop links */
+
   .nav-links {
     display: none;
   }
 
+
   /* Show hamburger */
+
   .menu-button {
     display: flex;
   }
 
+
+  /* Logo */
+
   .logo img {
     width: 165px;
+  }
+
+
+  /* Full width dropdown */
+
+  .mobile-dropdown {
+    left: 0;
+
+    right: 0;
+
+    width: 100%;
+  }
+
+
+  /* Open dropdown */
+
+  .mobile-dropdown.dropdown-open {
+    max-height: 400px;
+  }
+
+
+  /* Links */
+
+  .mobile-dropdown a {
+    min-height: 64px;
+
+    padding-left: 27px;
+
+    font-size: 18px;
   }
 }
 
@@ -326,28 +369,63 @@ body {
 
 @media (max-width: 480px) {
 
-  .navbar {
-    height: 85px;
-  }
-
   .navbar-container {
+    height: 85px;
+
     padding: 0 18px;
   }
+
+
+  /* Logo */
 
   .logo img {
     width: 145px;
   }
 
+
+  /* Menu button */
+
   .menu-button {
     width: 40px;
+
     height: 40px;
   }
 
-  .menu-button span {
+
+  /* Hamburger */
+
+  .menu-button:not(.menu-open) span {
     width: 25px;
+
+    height: 3px;
   }
 
-  .sidebar {
-    width: 290px;
+
+  /* Close */
+
+  .close-icon {
+    width: 40px;
+
+    height: 40px;
+
+    font-size: 36px;
+  }
+
+
+  /* Dropdown */
+
+  .mobile-dropdown {
+    width: 100%;
+  }
+
+
+  /* Dropdown links */
+
+  .mobile-dropdown a {
+    min-height: 64px;
+
+    padding-left: 27px;
+
+    font-size: 17px;
   }
 }
