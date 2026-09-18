@@ -15,7 +15,7 @@ function Navbar() {
 
           {/* Logo */}
           <a href="#home" className="logo" onClick={closeMenu}>
-            <img src="/public/housing_society.png" alt="Housing Society" />
+            <img src="/housing_society.png" alt="Housing Society" />
           </a>
 
           {/* Desktop Navigation */}

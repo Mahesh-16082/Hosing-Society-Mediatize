@@ -9,7 +9,7 @@ function Status() {
         {/* Building Image */}
         <div className="status-image">
           <img
-            src="/public/status5.png"
+            src="/status5.png"
             alt="B06 Tower construction status"
           />
         </div>

@@ -5,10 +5,10 @@ function CurrentStatus() {
   const [currentImage, setCurrentImage] = useState(0);
 
   const images = [
-    "/public/status1.png",
-    "/public/status2.png",
-    "/public/status3.jpg",
-    "/public/status4.jpg",
+    "/status1.png",
+    "/status2.png",
+    "/status3.jpg",
+    "/status4.jpg",
   ];
 
   // Previous image

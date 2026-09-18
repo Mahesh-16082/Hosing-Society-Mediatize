@@ -7,15 +7,15 @@ function Plans() {
   const plans = {
     site: {
       title: "Site Layout",
-      image: "/public/site_layout.png",
+      image: "/site_layout.png",
     },
     floor: {
       title: "Floor Plan",
-      image: "/public/floor_plan.jpg",
+      image: "/floor_plan.jpg",
     },
     map: {
       title: "Map Location",
-      image: "/public/map_location.jpg",
+      image: "/map_location.jpg",
     },
   };
 
