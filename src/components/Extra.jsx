@@ -1,4 +1,4 @@
-import "./Extra.css";
+import "./extra.css";
 
 function Extra() {
   const facilities = [

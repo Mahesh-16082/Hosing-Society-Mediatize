@@ -1,4 +1,4 @@
-import "./Status.css";
+import "./status.css";
 
 function Status() {
   return (

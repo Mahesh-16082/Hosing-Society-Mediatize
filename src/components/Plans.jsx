@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Plans.css";
+import "./plans.css";
 
 function Plans() {
   const [activePlan, setActivePlan] = useState("site");

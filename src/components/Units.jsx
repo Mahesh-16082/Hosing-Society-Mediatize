@@ -1,4 +1,4 @@
-import "./Units.css";
+import "./units.css";
 
 function Units() {
   const unitDetails = [
